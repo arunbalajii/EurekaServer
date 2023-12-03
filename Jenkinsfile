@@ -23,7 +23,7 @@ pipeline {
         stage('3. Build Docker Image'){
             steps{
                 script{
-                    bat 'docker build --build-arg USERNAME=%USER% --build-arg PASSWORD=%PWD% -f Dockerfile -t arunvig/jenkins_eureka_ser:latest .'
+                    bat 'docker build -f Dockerfile -t arunvig/jenkins_eureka_ser:latest .'
                     }
             }
 
